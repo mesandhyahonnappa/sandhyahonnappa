@@ -1,0 +1,58 @@
+:root {
+  --theme: #00ccff;
+  --complement: #ff3300;
+  --white: #fff;
+  --black: #1c1917;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 37.5%; //1 rem = 6px, 6/16 = 37.5%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  font-family: "Noto Serif Display", serif;
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 1.7;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: none;
+  overflow-x: hidden;
+  line-height: normal;
+  padding: 0 12rem;
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+  @include respond(big-desktop) {
+    padding: 0 18rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  &:hover {
+    letter-spacing: 1px;
+  }
+}
+
+::selection {
+  background-color: var(--theme);
+  color: var(--white);
+}
