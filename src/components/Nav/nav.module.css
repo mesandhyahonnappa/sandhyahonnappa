@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  color: var(--theme);
+  padding: 0.25rem;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 300;
+}

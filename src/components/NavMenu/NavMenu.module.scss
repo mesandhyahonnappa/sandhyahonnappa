@@ -1,0 +1,156 @@
+@import "../../styles/respond";
+
+$menu-zindex: 1100;
+$hamburger-zindex: $menu-zindex + 10;
+
+.container {
+  background-color: var(--black);
+}
+// Hamburger menu toggler stuff below
+.toggleMenu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  outline: none;
+  padding: 0;
+  pointer-events: initial;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  z-index: $hamburger-zindex;
+
+  span {
+    background-color: var(--theme);
+    content: "";
+    display: block;
+    height: 2px;
+    left: calc(50% - 13px);
+    position: absolute;
+    top: calc(50% - 1px);
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+      transform 0.2s linear;
+    width: 26px;
+
+    &:before,
+    &:after {
+      background-color: var(--theme);
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      transform-origin: 50% 50%;
+      transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+        transform 0.2s linear;
+      width: 26px;
+    }
+
+    &:before {
+      top: 7px;
+    }
+
+    &:after {
+      top: -7px;
+    }
+  }
+
+  &.active {
+    span {
+      background-color: transparent;
+      transition: background 0.2s ease-out;
+
+      &:before,
+      &:after {
+        transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+      }
+
+      &:before {
+        top: 0;
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+    }
+  }
+}
+
+.menuContainer {
+  background-color: var(--black);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  // For some sweet fadez
+  visibility: hidden;
+  width: 100%;
+
+  z-index: $menu-zindex;
+  cursor: default;
+  font-weight: 800;
+  font-size: clamp(12vh, 72px, 6vw);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include respond(phone) {
+    font-size: 8rem;
+  }
+
+  .nav {
+    .tag {
+      font-style: italic;
+      font-size: 3.2rem;
+      font-weight: 500;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+      animation: textClipEnter 1s 300ms cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .explore {
+      font-style: italic;
+      color: #fafaf9;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(1rem);
+      animation: exploreTextEnter 1s 0ms cubic-bezier(0.5, 0, 0.1, 1) both;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
+@keyframes exploreTextEnter {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    margin-left: 0;
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: 2rem;
+  }
+}
+
+@keyframes textClipEnter {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
