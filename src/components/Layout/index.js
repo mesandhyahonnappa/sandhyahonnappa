@@ -1,12 +1,17 @@
 import React from "react"
-import * as classes from "./Layout.module.css"
+import { Link } from "gatsby"
+import logo from "../../images/Logo.png"
+import * as classes from "./layout.module.scss"
 
 const Layout = ({ children }) => {
   return (
-    <div className={classes.layout}>
-      <h1>Sandhya Honnappa</h1>
-      <hr />
-      {children}
+    <div className={classes.content}>
+      <header className={classes.header}>
+        <Link data-cursor="link" to="/">
+          <img src={logo} alt="Sandhya Honnappa" width="200px" />
+        </Link>
+      </header>
+      <main className={classes.mainContent}>{children}</main>
     </div>
   )
 }

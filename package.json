@@ -16,6 +16,7 @@
   "dependencies": {
     "gatsby": "^4.7.1",
     "gatsby-plugin-layout": "^3.7.0",
+    "gatsby-plugin-sass": "^5.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

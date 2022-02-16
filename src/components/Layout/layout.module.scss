@@ -1,0 +1,19 @@
+.content {
+  border: 2px solid red;
+  margin: 3rem;
+  padding: 3rem;
+
+  box-sizing: border-box;
+  min-height: calc(100vh - 40px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  .mainContent {
+    padding: 0;
+  }
+}
