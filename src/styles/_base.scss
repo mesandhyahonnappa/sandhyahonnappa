@@ -45,6 +45,7 @@ body {
 }
 
 a {
+  cursor: none;
   text-decoration: none;
   color: var(--white);
   &:hover {

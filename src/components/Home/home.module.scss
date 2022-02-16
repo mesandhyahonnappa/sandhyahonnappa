@@ -1,0 +1,137 @@
+@import "../../styles/respond";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: calc(100vh - 40px);
+  margin: 20px;
+  overflow: hidden;
+  z-index: 100;
+  // border: 1px solid white;
+  cursor: default;
+
+  .introMessage {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-size: clamp(12vh, 72px, 6vw);
+    font-weight: 800;
+    padding-left: 8rem;
+    animation: outerLeft 3s 2s ease both;
+
+    @include respond(phone) {
+      font-size: 8rem;
+      animation: none;
+    }
+
+    .introMessageInner {
+      // border: 1px solid green;
+      display: inline-block;
+      animation: innerLeft 3s 2s ease both;
+
+      @include respond(phone) {
+        animation: none;
+      }
+    }
+    .tag {
+      font-style: italic;
+      font-size: 3.2rem;
+      font-weight: 500;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+      animation: textClipEnter 1s 300ms cubic-bezier(0.5, 0, 0.1, 1) both,
+        innerLeft 1s 2s ease both;
+
+      @include respond(phone) {
+        animation: textClipEnter 1s 300ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      }
+    }
+
+    .textShow {
+      animation: textClipEnter 500ms 0ms cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .greetingText {
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+      animation: textClipEnter 1s 500ms cubic-bezier(0.5, 0, 0.1, 1) both,
+        innerLeft 1s 2s ease both;
+      @include respond(phone) {
+        animation: textClipEnter 1s 500ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      }
+    }
+    .firstName {
+      color: var(--theme);
+      animation: textClipEnter 1s 800ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .lastName {
+      color: var(--theme);
+      animation: textClipEnter 1s 1100ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .explore {
+      font-style: italic;
+      color: #fafaf9;
+      transform: translateX(1rem);
+      animation: exploreTextEnter 1s 0ms cubic-bezier(0.5, 0, 0.1, 1) both;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  .image {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@keyframes exploreTextEnter {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    margin-left: 0;
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: 2rem;
+  }
+}
+
+@keyframes textClipEnter {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes outerLeft {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes innerLeft {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes imageIn {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

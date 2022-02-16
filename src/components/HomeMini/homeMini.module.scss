@@ -1,0 +1,51 @@
+@import "../../styles/respond";
+.menu {
+  position: absolute;
+  right: 1rem;
+  top: 3rem;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  cursor: default;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(12vh, 72px, 6vw);
+  @include respond(phone) {
+    font-size: 8rem;
+  }
+
+  .greet {
+    .tag {
+      font-size: italic;
+      font-size: 3.2rem;
+      font-weight: 500;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+      animation: textClipEnter 1s 300ms cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+    .greetingText {
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+      animation: textClipEnter 1s 500ms cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+    .firstName {
+      color: var(--theme);
+      animation: textClipEnter 1s 800ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .lastName {
+      color: var(--theme);
+      animation: textClipEnter 1s 1100ms cubic-bezier(0.5, 0, 0.1, 1) both;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+@keyframes textClipEnter {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

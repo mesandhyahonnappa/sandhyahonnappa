@@ -25,7 +25,7 @@ const NavMenu = () => {
   }
   return (
     <div className={classes.container}>
-      <nav class="nav">
+      <nav className="nav">
         <button
           onClick={toggleMenu}
           className={
