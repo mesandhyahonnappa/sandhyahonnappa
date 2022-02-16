@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react"
 import { useSpring, animated } from "@react-spring/web"
 import { useGesture } from "@use-gesture/react"
-import me from "../../images/profile.jpg"
+import me from "../../images/Profile.jpg"
 import * as classes from "./imageProfile.module.scss"
 const isBrowser = typeof window !== "undefined"
 
