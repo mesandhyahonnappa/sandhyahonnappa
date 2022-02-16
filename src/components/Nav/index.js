@@ -1,16 +1,16 @@
-import React, { useState, useLayoutEffect } from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import * as classes from "./nav.module.css";
-import NavMenu from "../NavMenu";
-const isBrowser = typeof window !== "undefined";
+import React, { useState, useLayoutEffect } from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import * as classes from "./nav.module.css"
+import NavMenu from "../NavMenu"
+const isBrowser = typeof window !== "undefined"
 
 const Nav = () => {
-  const [smallScreen, setSmallScreen] = useState(false);
+  const [smallScreen, setSmallScreen] = useState(false)
   useLayoutEffect(() => {
-    const width = isBrowser ? window.innerWidth : 0;
+    const width = isBrowser ? window.innerWidth : 0
 
-    setSmallScreen(width <= 1200);
-  }, []);
+    setSmallScreen(width <= 1200)
+  }, [])
 
   const data = useStaticQuery(graphql`
     {
@@ -23,14 +23,16 @@ const Nav = () => {
         }
       }
     }
-  `);
-  const navItems = data.site.siteMetadata.navItems;
+  `)
+  const navItems = data.site.siteMetadata.navItems
 
   return !smallScreen ? (
     <nav className={classes.nav}>
       {navItems.map((item, index) => {
         return (
           <Link
+            role="navigation"
+            aria-label={item.label}
             data-cursor="link"
             key={index}
             to={item.path}
@@ -38,12 +40,12 @@ const Nav = () => {
           >
             {`<${item.label} />`}
           </Link>
-        );
+        )
       })}
     </nav>
   ) : (
     <NavMenu />
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

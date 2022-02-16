@@ -50,6 +50,8 @@ const NavMenu = () => {
             {navItems.map((item, index) => {
               return (
                 <Link
+                  role="navigation"
+                  aria-label={item.label}
                   onClick={toggleMenu}
                   key={index}
                   className={classes.link}

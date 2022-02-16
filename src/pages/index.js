@@ -24,11 +24,18 @@ const IndexPage = () => {
               className={classes.greetingText}
               onMouseEnter={() => setAbout(true)}
               onMouseLeave={() => setAbout(false)}
+              role="button"
+              tabIndex="0"
             >
               {!about && <span className={classes.textShow}>Hello, I'm </span>}
               {about && (
                 <span className={classes.explore}>
-                  <Link className={classes.link} to="/about">
+                  <Link
+                    role="navigation"
+                    aria-label="About"
+                    className={classes.link}
+                    to="/about"
+                  >
                     {windowWidth <= 1200 ? `<about />` : `<about>...</about>`}
                   </Link>
                 </span>
@@ -38,13 +45,20 @@ const IndexPage = () => {
               className={classes.firstName}
               onMouseEnter={() => setSkills(true)}
               onMouseLeave={() => setSkills(false)}
+              role="button"
+              tabIndex="0"
             >
               {!skills && (
                 <span className={`${classes.textShow}`}>Sandhya </span>
               )}
               {skills && (
                 <span className={classes.explore}>
-                  <Link className={classes.link} to="/skills">
+                  <Link
+                    role="navigation"
+                    aria-label="Skills"
+                    className={classes.link}
+                    to="/skills"
+                  >
                     {windowWidth <= 1200
                       ? `<skills />`
                       : `<skills>...</skills>`}
@@ -53,6 +67,8 @@ const IndexPage = () => {
               )}
             </div>
             <div
+              role="button"
+              tabIndex="0"
               className={classes.lastName}
               onMouseEnter={() => setContact(true)}
               onMouseLeave={() => setContact(false)}
@@ -60,7 +76,12 @@ const IndexPage = () => {
               {!contact && <span className={classes.textShow}>Honnappa</span>}
               {contact && (
                 <span className={classes.explore}>
-                  <Link className={classes.link} to="/contact">
+                  <Link
+                    role="navigation"
+                    aria-label="Contact"
+                    className={classes.link}
+                    to="/contact"
+                  >
                     {windowWidth <= 1200
                       ? `<contact />`
                       : `<contact>...</contact>`}

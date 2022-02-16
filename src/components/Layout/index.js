@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Nav from "../Nav"
 import logo from "../../images/Logo.png"
+import Cursor from "../Cursor"
 import * as classes from "./layout.module.scss"
 
 const Layout = ({ children, pageContext }) => {
@@ -9,6 +10,7 @@ const Layout = ({ children, pageContext }) => {
     <>
       {pageContext.layout !== "root" ? (
         <>
+          <Cursor />
           <div className={classes.content}>
             <header className={classes.header}>
               <Link data-cursor="link" to="/">

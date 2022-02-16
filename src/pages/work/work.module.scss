@@ -1,0 +1,35 @@
+@import "../../styles/respond";
+
+.container {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  padding-left: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  .workDescription {
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
+  }
+  .workExperience {
+    grid-column: 4/-1;
+    grid-row: 1/2;
+    padding-left: 2rem;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+    }
+
+    .experience {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

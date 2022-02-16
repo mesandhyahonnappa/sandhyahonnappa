@@ -1,0 +1,15 @@
+@import "../../styles/respond";
+.gigaMaskedText {
+  font-size: 18vw;
+  font-weight: 700;
+  color: #57534e;
+  opacity: 0.06;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+
+  @include respond(phone) {
+    top: 70px;
+  }
+}

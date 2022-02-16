@@ -1,0 +1,91 @@
+[
+  {
+    "duration": "2019 - 2022",
+    "title": "Front-End Architect/Specialist",
+    "organization": "L&T Technologies and Services",
+    "url": "https://www.ltts.com/",
+    "tags": [
+      "html",
+      "css",
+      "react",
+      "angular",
+      "gatsby",
+      "nextjs",
+      "typescript",
+      "javascript"
+    ],
+    "responsibilities": [
+      "Providing end-to-end Architectural Design Solutions multiple React and Angular Projects",
+      "Consulting multiple projects on Code Review, Design Solutions and Technical Challenges.",
+      "Investigating, troubleshooting and solving defects and performance issues.",
+      "Executed FrontEnd capability build program."
+    ]
+  },
+  {
+    "duration": "2015 - 2019",
+    "title": "Lead Front-End Developer",
+    "organization": "SLK Software",
+    "url": "https://www.slksoftware.com/",
+    "tags": [
+      "html",
+      "css",
+      "react",
+      "angular",
+      "typescript",
+      "javascript",
+      "asp.net",
+      "mvc",
+      "sql"
+    ],
+    "responsibilities": [
+      "Lead the project from conception to completion",
+      "Interact with business and technical stakeholders to understand functional and non-functional requirements, challenges and expectations.",
+      "Provide in-depth and strong technical knowledge and support to the team. Did peer reviews.",
+      "Developed complex UI Components with validations and micro interactions",
+      "Redesigned, modernized and simplified an overly-complex user interface, while preserving all functionality"
+    ]
+  },
+  {
+    "duration": "2014 - 2015",
+    "title": "Full Stack - Senior Software Developer",
+    "organization": "Xerox",
+    "url": "https://www.xerox.com/",
+    "tags": [
+      "html",
+      "css",
+      "javascript",
+      "win forms",
+      "asp.net",
+      "c#",
+      "web api",
+      "sql"
+    ],
+    "responsibilities": [
+      "Extensively worked on Web Forms in ASP.NET and C#",
+      "Improved performance of SQL procedures",
+      "Resolved design issues through root cause analysis and performed data cleanups"
+    ]
+  },
+  {
+    "duration": "2012 - 2014",
+    "title": "Full Stack - Software Developer",
+    "organization": "Tricon Infotech",
+    "tags": ["html", "css", "javascript", "asp.net", "c#", "web api", "sql"],
+    "url": "https://www.triconinfotech.com/",
+    "responsibilities": [
+      "Worked on upgrading the product to newer technology with ASP.NET MVC and SQL",
+      "Redesigned user interface with responsive design",
+      "Involved in client visits and requirement gathering"
+    ]
+  },
+  {
+    "duration": "2010 - 2012",
+    "title": "Software Developer",
+    "organization": "Apex Decisions",
+    "url": "https://www.apexdecisions.com/",
+    "tags": ["html", "css", "asp.net", "c#", "sql"],
+    "responsibilities": [
+      "Involved in maintenance, enhancement and defect fixing on ASP.NET application"
+    ]
+  }
+]

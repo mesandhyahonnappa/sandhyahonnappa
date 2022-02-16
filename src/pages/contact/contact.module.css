@@ -1,0 +1,22 @@
+.contactHeader {
+  font-size: 4.2rem;
+  padding-bottom: 1rem;
+}
+
+.icon {
+  color: var(--theme);
+  margin-right: 1rem;
+}
+
+.contactMail,
+.contactPhone {
+  margin-bottom: 1rem;
+}
+.contactMail a,
+.contactPhone a {
+  display: inline;
+  text-decoration: none;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+}

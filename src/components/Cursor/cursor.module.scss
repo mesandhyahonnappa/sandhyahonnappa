@@ -1,0 +1,27 @@
+.cursorDotOutline,
+.cursorDot {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out;
+  mix-blend-mode: difference;
+  z-index: 99999;
+}
+
+.cursorDot {
+  --dotColor: var(--complement);
+  width: 8px;
+  height: 8px;
+  background-color: var(--dotColor);
+}
+
+.cursorDotOutline {
+  --outlineColor: var(--white);
+  width: 40px;
+  height: 40px;
+  background-color: var(--outlineColor);
+}

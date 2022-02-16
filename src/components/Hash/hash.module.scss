@@ -1,0 +1,14 @@
+.hash {
+  overflow: hidden;
+  .svg {
+    width: 120px;
+    height: 120px;
+    //border: 1px solid #fff;
+
+    .line {
+      stroke: #00ccff;
+      stroke-linecap: round;
+      stroke-width: 12;
+    }
+  }
+}

@@ -1,0 +1,335 @@
+@import "../../styles/respond";
+
+.tm {
+  grid-area: tm;
+}
+.fc {
+  grid-area: fc;
+}
+.ds {
+  grid-area: ds;
+}
+.ht {
+  grid-area: ht;
+}
+.cs {
+  grid-area: cs;
+}
+.sb {
+  grid-area: sb;
+}
+.dw {
+  grid-area: dw;
+}
+.ac {
+  grid-area: ac;
+}
+.mf {
+  grid-area: mf;
+}
+.ux {
+  grid-area: ux;
+}
+.rl {
+  grid-area: rl;
+}
+.js {
+  grid-area: js;
+}
+.ef {
+  grid-area: ef;
+}
+.an {
+  grid-area: an;
+}
+.gb {
+  grid-area: gb;
+}
+.db {
+  grid-area: db;
+}
+.d3 {
+  grid-area: d3;
+}
+.sc {
+  grid-area: sc;
+}
+.ps {
+  grid-area: ps;
+}
+.sk {
+  grid-area: sk;
+}
+.cc {
+  grid-area: cc;
+}
+.cr {
+  grid-area: cr;
+}
+.gq {
+  grid-area: gq;
+}
+.re {
+  grid-area: re;
+}
+.jm {
+  grid-area: jm;
+}
+.dv {
+  grid-area: dv;
+}
+.no {
+  grid-area: no;
+}
+.cm {
+  grid-area: cm;
+}
+.sl {
+  grid-area: sl;
+}
+.nx {
+  grid-area: nx;
+}
+.de {
+  grid-area: de;
+}
+.sa {
+  grid-area: sa;
+}
+.pw {
+  grid-area: pw;
+}
+.rd {
+  grid-area: rd;
+}
+.sv {
+  grid-area: sv;
+}
+.mo {
+  grid-area: mo;
+}
+.dp {
+  grid-area: dp;
+}
+.te {
+  grid-area: te;
+}
+.ct {
+  grid-area: ct;
+}
+.cn {
+  grid-area: cn;
+}
+.ag {
+  grid-area: ag;
+}
+.ra {
+  grid-area: ra;
+}
+.ts {
+  grid-area: ts;
+}
+.tw {
+  grid-area: tw;
+}
+
+.gt {
+  grid-area: gt;
+}
+.wp {
+  grid-area: wp;
+}
+.container {
+  display: grid;
+  column-gap: 3rem;
+  row-gap: 4rem;
+  padding-left: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  // align-items: center;
+
+  .skillsDescription {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    p {
+      margin-bottom: 0.7rem;
+    }
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+    }
+  }
+  .wayPointProficiency {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 3/4;
+    }
+  }
+  .proficiency {
+    min-height: 100px;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 4/5;
+    }
+  }
+  .quote {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    margin: 6rem 0;
+    font-style: italic;
+    .text {
+      font-size: 4.8rem;
+      font-weight: 800;
+      padding-top: 1rem;
+    }
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 5/6;
+    }
+  }
+  .wayPointValues {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 6/7;
+    }
+  }
+  .values {
+    grid-column: 1/-1;
+    grid-row: 6/7;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 7/8;
+    }
+    min-height: 100px;
+    .process {
+      display: flex;
+      justify-content: space-around;
+
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: center;
+      }
+      margin: 2rem 0;
+      .value {
+        display: flex;
+        align-items: center;
+        strong {
+          margin-left: -42px;
+          font-size: 4.2rem;
+          text-transform: uppercase;
+          text-shadow: 2px 4px 6px #000;
+
+          @include respond(phone) {
+            margin-left: -20px;
+            font-size: 4.2rem;
+          }
+
+          span {
+            font-size: 6rem;
+            color: var(--complement);
+          }
+        }
+      }
+    }
+  }
+
+  .next {
+    grid-column: 1/-1;
+    grid-row: 7/8;
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 8/9;
+    }
+    text-align: right;
+  }
+
+  .tag {
+    @include respond(phone) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
+
+    grid-column: 2/-1;
+    color: #fff;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    grid-template-areas:
+      ".  .  .  .  .  js js js js .  .  .  .  .  .  ."
+      ".  .  .  .  .  tm tm tm tm tm .  .  .  .  .  ."
+      ".  .  .  .  ds fc fc sb cs cs .  .  mf .  .  ."
+      ".  .  dw dw ds ht ht sb ac ac ac ac mf .  .  ."
+      ".  .  an ux ds cr cr sb ts ts ts ts  mf ef ef ."
+      ".  .  an .  ds sa sa .  db db sc .  mf d3 .  dv"
+      ".  .  an ps ps ps sk sk sk sk sc cc cc cc .  dv"
+      ".  .  an re re re sk sk sk sk sc .  gq gq gq dv"
+      "cm .  an .  .  jm sk sk sk sk sc .  rl rl .  dv"
+      "cm no no no no jm sk sk sk sk sc pw rd rd .  dv"
+      "cm sl sl sl sl jm nx nx de gb gb pw ct ct ct ."
+      ".  sv sv sv mo te te .  de dp dp pw ra ra ra ."
+      ".  .  tw tw mo ag ag .  .  gt gt pw .  .  .  ."
+      ".  .  .  .  mo .  cn cn cn cn cn pw .  .  .  ."
+      ".  .  .  .  .  .  wp wp wp .  .  .  .  .  .  .";
+
+    div {
+      // border: 1px dotted;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .center {
+      font-size: 8vw;
+    }
+    .main {
+      font-size: 2.4rem;
+      color: var(--theme);
+      font-weight: bold;
+    }
+    .other {
+      @extend .verticle;
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--complement);
+    }
+    .soft {
+      color: #7f7f7f;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .themeText {
+      display: inline-block;
+      font-weight: bold;
+      color: var(--theme);
+      white-space: pre;
+    }
+  }
+}
+
+.verticle {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+.complementText {
+  display: inline-block;
+  color: var(--complement);
+  white-space: pre;
+}
+
+.icon {
+  color: var(--theme);
+  margin-right: 1rem;
+}
