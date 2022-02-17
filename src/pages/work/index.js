@@ -1,12 +1,12 @@
-import React from "react";
-import GigaText from "../../components/GigaText";
-import { useTrail, animated } from "react-spring";
-import * as classes from "./work.module.scss";
-import Block from "../../components/Block";
-import Experience from "../../components/Experience";
-import Seo from "../../components/Seo";
+import React from "react"
+import GigaText from "../../components/GigaText"
+import { useTrail, animated } from "react-spring"
+import * as classes from "./work.module.scss"
+import Block from "../../components/Block"
+import Experience from "../../components/Experience"
+import Seo from "../../components/Seo"
 
-import data from "../../data/work.json";
+import data from "../../data/work.json"
 
 const Work = () => {
   const trail = useTrail(data.length, {
@@ -15,7 +15,7 @@ const Work = () => {
     opacity: 1,
     x: 0,
     from: { opacity: 0, x: 20 },
-  });
+  })
 
   return (
     <>
@@ -40,7 +40,7 @@ const Work = () => {
         <div className={classes.workExperience}>
           <div className={classes.experience}>
             {trail.map((style, index) => (
-              <animated.div style={style}>
+              <animated.div key={index} style={style}>
                 <Experience {...data[index]} />
               </animated.div>
             ))}
@@ -48,7 +48,7 @@ const Work = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work
