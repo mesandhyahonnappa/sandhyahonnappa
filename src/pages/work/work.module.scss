@@ -32,4 +32,12 @@
       gap: 2rem;
     }
   }
+
+  .presentState {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    @include respond(phone) {
+      grid-row: 3/4;
+    }
+  }
 }

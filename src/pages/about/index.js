@@ -1,10 +1,10 @@
-import React from "react";
-import Block from "../../components/Block";
-import GigaText from "../../components/GigaText";
-import ImageProfile from "../../components/ImageProfile";
-import * as classes from "./about.module.scss";
-import GoNext from "../../components/GoNext";
-import Seo from "../../components/Seo";
+import React from "react"
+import Block from "../../components/Block"
+import GigaText from "../../components/GigaText"
+import ImageProfile from "../../components/ImageProfile"
+import * as classes from "./about.module.scss"
+import GoNext from "../../components/GoNext"
+import Seo from "../../components/Seo"
 
 const About = () => {
   return (
@@ -34,18 +34,17 @@ const About = () => {
               performant, easy to extend, modern UI application using Angular.
             </p> */}
             <p>
-              I enjoy working everything on Front-End, with extra fondness to
+              I enjoy on the Front-End ecosystems, with an extra fondness for
               Design and interactivity.
             </p>
             <p>
-              As of now I'm not the typical designer working on
-              Sketch/Illustrator, but I
+              I'm not the typical designer working on Sketch/Illustrator, but I
               <span style={{ color: "var(--complement)" }}> &#10084; </span>
               to design, engrossed in tweaking CSS, creating device ergonomic
               layouts.
             </p>
             <p>
-              Outside my work and learning I like to cook, read and spend time
+              Outside my work and learning, I like to cook, read, and spend time
               with my family.
             </p>
           </Block>
@@ -53,11 +52,11 @@ const About = () => {
         <div className={classes.journey}>
           <Block tag="journey">
             <h2>My Journey...</h2>
-            <p>I`ve over a decade of experience in programming for web.</p>
+            <p>I've over a decade of experience in programming for the web.</p>
             <p>
-              I`ve worked with both Startups and MNC on building several web
-              projects ranging from websites to complex data driven web
-              application from domain across
+              I've worked with startups and MNC, building several web projects
+              ranging from websites to complex data-driven web applications from
+              domain across
               <em className={classes.complementText}> payroll</em>,
               <em className={classes.complementText}> banking</em>,
               <em className={classes.complementText}> healthcare</em>,
@@ -65,16 +64,16 @@ const About = () => {
               <em className={classes.complementText}> telecommunication</em>.
             </p>
             <p>
-              Initially built web apps using ASP.NET web forms, ASP.NET MVC and
-              JQuery. I worked hard, gained expertise in pillars of WEB -
-              <em className={classes.complementText}> HTML</em>,{" "}
+              I have initially built web apps using ASP.NET web forms, ASP.NET
+              MVC and JQuery. Eventually, I worked hard to gain expertise in
+              pillars of WEB -<em className={classes.complementText}> HTML</em>,{" "}
               <em className={classes.complementText}> CSS</em>, and
               <em className={classes.complementText}> JavaScript</em>.
             </p>
             <p>
-              I was fascinated by the power of JQuery to the web interactivity,
-              I grown interest for then emerging JS Frameworks Angular and
-              React.
+              I was fascinated by how JQuery enabled us to write less and
+              achieve more. As a result, I grew interest for the emerging JS
+              Frameworks Angular and React.
             </p>
 
             <p>
@@ -84,7 +83,8 @@ const About = () => {
               frameworks.
             </p>
             <p>
-              I`m completely into frontend development for over 5 years now.
+              I've been entirely into front-end development for over 5 years
+              now.
             </p>
             <p>
               I have worked as a
@@ -95,16 +95,16 @@ const About = () => {
               .
             </p>
             <p>
-              I've worked on Design System, building simple UI to complex data
-              visualization web components. These framework agnostic web
-              components are used for rapid app development.
+              I've worked on a Design System, building simple UI to complex data
+              visualization framework-agnostic web components.
             </p>
             <p>
-              Humbled to have executed Frontend capability Building Program, the
-              helped fellow engineers to master frontend technologies and honed
-              them to become valuable assets to any team they worked with. Thus
-              winning and executing many client projects, which best served the
-              companies growth.
+              I am humbled to have executed the Frontend capability Building
+              Program, which helped fellow engineers to master frontend
+              technologies and honed them to become valuable assets to any team
+              they have worked.
+              <br /> As a result, we could win and execute many client projects,
+              which best served the company's growth.
             </p>
           </Block>
         </div>
@@ -113,7 +113,7 @@ const About = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About

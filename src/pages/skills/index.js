@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import { FaQuoteLeft } from "react-icons/fa";
-import { HiHashtag } from "react-icons/hi";
-import { Waypoint } from "react-waypoint";
-import Block from "../../components/Block";
-import { useSpring, animated } from "react-spring";
-import GigaText from "../../components/GigaText";
-import Hash from "../../components/Hash";
-import * as classes from "./skills.module.scss";
-import GoNext from "../../components/GoNext";
-import Seo from "../../components/Seo";
+import React, { useState } from "react"
+import { FaQuoteLeft } from "react-icons/fa"
+import { HiHashtag } from "react-icons/hi"
+import { Waypoint } from "react-waypoint"
+import Block from "../../components/Block"
+import { useSpring, animated } from "react-spring"
+import GigaText from "../../components/GigaText"
+import Hash from "../../components/Hash"
+import * as classes from "./skills.module.scss"
+import GoNext from "../../components/GoNext"
+import Seo from "../../components/Seo"
 
 const Skills = () => {
-  const [values, setValues] = useState(false);
-  const [proficiency, setProficiency] = useState(false);
+  const [values, setValues] = useState(false)
+  const [proficiency, setProficiency] = useState(false)
   const style = useSpring({
     from: { opacity: 0, scale: 0.8 },
     to: { opacity: 1, scale: 1 },
     delay: 1000,
     config: { duration: 1000 },
-  });
+  })
 
-  const onScrollTo = (block) => {
-    console.log(block);
+  const onScrollTo = block => {
+    console.log(block)
     if (block === "proficiency") {
-      setProficiency(true);
+      setProficiency(true)
     }
     if (block === "values") {
-      setValues(true);
+      setValues(true)
     }
-  };
+  }
   return (
     <>
       <Seo title="Skills | Sandhya Honnappa" />
@@ -39,13 +39,13 @@ const Skills = () => {
             <p>
               With over
               <em className={classes.complementText}> 12 years </em>
-              of experience in developing wide variety of web applications I
+              of experience developing a wide variety of web applications, I
               have honed the skills to create high-quality software solutions
-              for web.
+              for the web.
             </p>
             <p>
               I've not only gained expertise in
-              <em className={classes.complementText}>FrontEnd</em> tech stacks
+              <em className={classes.complementText}> FrontEnd</em> tech stacks
               but have also enhanced the
               <em className={classes.complementText}> soft skills </em>
               required to produce at peak level.
@@ -263,7 +263,7 @@ const Skills = () => {
                 </div>
               </div>
               <p>
-                I have ingrained that learning is eternal. These skills didn’t
+                I have ingrained that learning is eternal. These skills didn't
                 exist a few years ago and will likely be outdated a few years
                 from now. Thus, I am constantly learning new technologies.
               </p>
@@ -280,7 +280,7 @@ const Skills = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills
