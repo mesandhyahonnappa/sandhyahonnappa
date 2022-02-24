@@ -31,9 +31,10 @@ const Work = () => {
               software application that best served their business.
             </p>
             <p>
-              I've lead multiple projects by collaborating with developers,
-              project managers, business analysts and users in conceptualizing,
-              estimating and developing all simple to complex web applications.
+              I've led multiple projects by collaborating with developers,
+              project managers, business analysts, and users and
+              conceptualizing, estimating, architecture, and developing simple
+              to complex web applications.
             </p>
           </Block>
         </div>
@@ -45,6 +46,12 @@ const Work = () => {
               </animated.div>
             ))}
           </div>
+        </div>
+        <div className={classes.presentState}>
+          <Block tag="present">
+            I recently decided to work as an independent front-end developer
+            based on my professional accomplishment.
+          </Block>
         </div>
       </div>
     </>
