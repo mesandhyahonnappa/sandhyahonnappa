@@ -47,12 +47,12 @@ const Work = () => {
             ))}
           </div>
         </div>
-        <div className={classes.presentState}>
+        {/* <div className={classes.presentState}>
           <Block tag="present">
             I recently decided to work as an independent front-end developer
             based on my professional accomplishment.
           </Block>
-        </div>
+        </div> */}
       </div>
     </>
   )
