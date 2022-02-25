@@ -8,36 +8,50 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   align-items: center;
+
+  .presentState {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    .connect {
+      list-style: none;
+    }
+
+    .icon {
+      color: var(--theme);
+    }
+
+    .upworkLink {
+      display: inline-block;
+      white-space: pre;
+      & > a {
+        color: var(--theme);
+      }
+    }
+  }
+
   .workDescription {
     grid-column: 1/4;
-    grid-row: 1/2;
+    grid-row: 2/3;
 
     @include respond(phone) {
       grid-column: 1/-1;
-      grid-row: 1/2;
+      grid-row: 2/3;
     }
   }
   .workExperience {
     grid-column: 4/-1;
-    grid-row: 1/2;
+    grid-row: 2/3;
     padding-left: 2rem;
     @include respond(phone) {
       grid-column: 1/-1;
-      grid-row: 2/3;
+      grid-row: 4/5;
     }
 
     .experience {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-    }
-  }
-
-  .presentState {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    @include respond(phone) {
-      grid-row: 3/4;
     }
   }
 }

@@ -16,10 +16,6 @@ module.exports = {
         label: "Work",
         path: "/work",
       },
-      {
-        label: "Contact",
-        path: "/contact",
-      },
     ],
   },
   plugins: [

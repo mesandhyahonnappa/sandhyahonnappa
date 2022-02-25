@@ -1,5 +1,6 @@
 import React from "react"
 import GigaText from "../../components/GigaText"
+import { HiHashtag } from "react-icons/hi"
 import { useTrail, animated } from "react-spring"
 import * as classes from "./work.module.scss"
 import Block from "../../components/Block"
@@ -22,6 +23,56 @@ const Work = () => {
       <Seo title="Work | Sandhya Honnappa" />
       <GigaText text="Work" />
       <div className={classes.container}>
+        <div className={classes.presentState}>
+          <Block tag="present">
+            <p>
+              Working as an independent front-end developer on{" "}
+              <em className={classes.upworkLink}>
+                {" "}
+                <a
+                  href="https://www.upwork.com/freelancers/sandhyahonnappa"
+                  target="blank"
+                >
+                  Upwork
+                </a>
+              </em>
+              .
+            </p>
+            <ul className={classes.connect}>
+              <li>
+                <HiHashtag className={classes.icon} size="1em" />
+                Are you looking for an expert front-end developer for building
+                your web application?
+              </li>
+              <li>
+                <HiHashtag className={classes.icon} size="1em" />
+                Are you looking for someone who can lead your project from
+                initiation to completion?
+              </li>
+              <li>
+                <HiHashtag className={classes.icon} size="1em" />
+                Do you need someone who can code your project and also be a
+                leader who can guide your other team members?
+              </li>
+              <li>
+                <HiHashtag className={classes.icon} size="1em" />
+                Are you looking for elite work?
+              </li>
+            </ul>
+            <p>
+              Please connect with me through Upwork,
+              <em className={classes.upworkLink}>
+                {" "}
+                <a
+                  href="https://www.upwork.com/freelancers/sandhyahonnappa"
+                  target="blank"
+                >
+                  here.
+                </a>
+              </em>
+            </p>
+          </Block>
+        </div>
         <div className={classes.workDescription}>
           <Block tag="work">
             <p>
@@ -47,12 +98,6 @@ const Work = () => {
             ))}
           </div>
         </div>
-        {/* <div className={classes.presentState}>
-          <Block tag="present">
-            I recently decided to work as an independent front-end developer
-            based on my professional accomplishment.
-          </Block>
-        </div> */}
       </div>
     </>
   )

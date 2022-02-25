@@ -4,7 +4,7 @@ import * as classes from "./home.module.scss"
 const Home = () => {
   const [about, setAbout] = useState(false)
   const [skills, setSkills] = useState(false)
-  const [contact, setContact] = useState(false)
+  const [work, setWork] = useState(false)
 
   return (
     <>
@@ -60,19 +60,19 @@ const Home = () => {
               role="button"
               tabIndex="0"
               className={classes.lastName}
-              onMouseEnter={() => setContact(true)}
-              onMouseLeave={() => setContact(false)}
+              onMouseEnter={() => setWork(true)}
+              onMouseLeave={() => setWork(false)}
             >
-              {!contact && <span className={classes.textShow}>Honnappa</span>}
-              {contact && (
+              {!work && <span className={classes.textShow}>Honnappa</span>}
+              {work && (
                 <span className={classes.explore}>
                   <Link
                     role="navigation"
-                    aria-label="Contact"
+                    aria-label="Work"
                     className={classes.link}
-                    to="/contact"
+                    to="/work"
                   >
-                    {`<contact>...</contact>`}
+                    {`<work>...</work>`}
                   </Link>
                 </span>
               )}
